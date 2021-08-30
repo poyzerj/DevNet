@@ -31,5 +31,6 @@ tn.write(b"switchport trunk encapsulation dot1q\n")
 tn.write(b"switchport mode trunk\n")
 tn.write(b"switchport nonegotiate\n")
 tn.write(b"exit\n")
+tn.write(b"end\n")
 
 print(tn.read_all().decode('ascii'))
