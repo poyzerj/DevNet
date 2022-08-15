@@ -12,7 +12,7 @@ while x < y:
     answer = input("Press y then enter to end.")
 
     if answer == "y":
-        pass
+        pass #Do nothing
         #Do some code in the future
 
         # continue #Iterate a loop early
