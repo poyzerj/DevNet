@@ -23,9 +23,8 @@ url = f"https://{router['ip']}:{router['port']}/restconf/data/Cisco-IOS-XE-inter
 response = requests.get(url, headers=headers, auth=(router['user'],router['password']), verify=False)
 
 api_data = response.json()
-print(api_data)
-# print("/" * 50)
-# pprint(api_data["Cisco-IOS-XE-interfaces-oper:interface"]["description"])
-# print("/" * 50)
-# if api_data["Cisco-IOS-XE-interfaces-oper:interface"]["admin-status"] == 'if-state-up':
-#     print("Interface is up")
+print("/" * 50)
+pprint(api_data["Cisco-IOS-XE-interfaces-oper:interface"]["description"])
+print("/" * 50)
+if api_data["Cisco-IOS-XE-interfaces-oper:interface"]["admin-status"] == 'if-state-up':
+    print("Interface is up")
