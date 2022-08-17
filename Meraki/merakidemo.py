@@ -18,8 +18,6 @@ for response_org in response:
     orgId = response_org["id"]
 print(orgId)
 
-# params = {}
-# params['organization_id'] = orgId
 net_url = f"https://api.meraki.com/api/v0/organizations/{orgId}/networks"
 networks = requests.get(net_url, headers=headers, data=payload, verify=False).json()
 
