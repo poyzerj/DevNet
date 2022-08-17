@@ -18,8 +18,7 @@ headers = {
 
 url = f"https://{router['ip']}:{router['port']}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=GigabitEthernet1"
 
-response = requests.get(url, headers=headers, auth=(
-    router['user'], router['password']), verify=False)
+response = requests.get(url, headers=headers, auth=(router['user'], router['password']), verify=False)
 
 api_data = response.json()
 print("/" * 50)
