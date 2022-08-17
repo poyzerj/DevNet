@@ -4,7 +4,7 @@ from pprint import pprint
 
 # set up connection parameters in a dictionary
 router = {
-    "ip": "192.168.1.250",
+    "ip": "192.168.1.252",
     "port": "443",
     "user": "cisco",
     "password": "cisco"
