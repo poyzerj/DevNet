@@ -4,10 +4,10 @@ from pprint import pprint
 
 # set up connection parameters in a dictionary
 router = {
-    "ip": "192.168.1.252",
+    "ip": "10.10.20.100",
     "port": "443",
-    "user": "cisco",
-    "password": "cisco"
+    "user": "developer",
+    "password": "C1sco12345"
 }
 
 # set REST API headers
