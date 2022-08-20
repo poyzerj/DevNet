@@ -49,10 +49,10 @@ for device in device_response:
 
 
 # Get Templates
-# template_url = 'https://sandboxsdwan.cisco.com:8443/dataservice/template/device'
-# template_response = session.get(template_url, verify=False).json()['data']
-# print(template_response)
+template_url = 'https://sandbox-sdwan-2.cisco.com:443/dataservice/template/device'
+template_response = session.get(template_url, verify=False).json()['data']
+print(json.dumps(template_response, indent=2, sort_keys=True))
 # ip = '4.4.4.61'
-# url = f"https://sandboxsdwan.cisco.com:8443/dataservice/device/policy/qosschedulerinfo?deviceId={ip}"
+# url = f"https://sandbox-sdwan-2.cisco.com:443/dataservice/device/policy/qosschedulerinfo?deviceId={ip}"
 # pol_response = session.get(url, verify=False).json()['data']
 # print(pol_response)
