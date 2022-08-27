@@ -1,0 +1,19 @@
+---
+
+- name: "NTP CONFIG PLAYBOOK"
+  hosts: routers
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: "Loop through NTP servers and configure"
+      vars:
+        myservers:
+          - "1.1.1.1"
+          - "2.2.2.2"
+          - "3.3.3.3"
+          - "4.4.4.4"
+      ios_ntp:
+        server: "{{ item }}"
+        state: present
+      loop: "{{ myservers }}"

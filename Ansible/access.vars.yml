@@ -1,0 +1,10 @@
+---
+
+- name: "Printing some var info"
+  hosts: routers
+  gather_facts: no
+  
+  tasks:
+    - name: " Parse var stuff"
+      debug:
+        msg: "{{ hostvars[ansible_host]['ospf']['networks'][2] }}"
