@@ -1,0 +1,19 @@
+---
+- name: Issue show commands
+  hosts: routers
+  connection: local
+  tasks:
+    - name: Show ip int brief
+      ios_command:
+        commands:
+          - show ip int brief
+        provider:
+          host: sandbox-iosxe-latest-1.cisco.com
+          port: 22
+          username: developer
+          password: C1sco12345
+      register: if_data
+
+    - name: Interfaces output
+      debug:
+        var: if_data['stdout_lines'][0]
