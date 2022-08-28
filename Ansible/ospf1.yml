@@ -25,4 +25,3 @@
     - name: "Print Cisco Output"
       debug:
         msg: "{{ cisco_output }}"
-      when: "ansible_network_os == 'cisco.ios.ios'"
