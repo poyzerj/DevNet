@@ -1,0 +1,11 @@
+---
+
+- name: "IP filter test"
+  hosts: 192.168.1.252
+
+  tasks:
+    - name: "IP addr filter stuff"
+      vars:
+        myip: "2001:db8:abcd::1"
+      debug:
+        msg: "{{ myip | ipv6 }}"

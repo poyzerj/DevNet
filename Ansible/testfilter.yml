@@ -1,0 +1,16 @@
+---
+
+- name: "Filter Test"
+  hosts: routers
+
+  tasks:
+    - name: "testing some filter stuff"
+      vars:
+        mylist:
+          - 5
+          - 10
+          - 4
+          - 44
+          - 21
+      debug:
+        msg: "{{ mylist | min }}"
